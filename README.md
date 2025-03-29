@@ -1,5 +1,8 @@
 # Candy-crush-mini_project
 
+## Objectif 
+Réaliser un jeu candy-crush like
+
 ## Cahier des charges du projet
 + La grille de jeu sera représentée par une liste 2D d’entiers. Un bonbon sera donc représenté
   par un entier dans cette grille.
@@ -15,8 +18,8 @@
 On définit une **combinaison** par au minimum **3 bonbons de même valeur alignés** horizontalement ou verticalement.
 
 La suppression d’une combinaison peut se faire de différentes manières. Nous vous proposons **3 niveaux de difficulté**, tels que :
-- **Niveau 1** : le plus facile à implémenter.
-- **Niveau 3** : le plus difficile à implémenter.
++ **Niveau 1** : le plus facile à implémenter.
++ **Niveau 3** : le plus difficile à implémenter.
 
 La **Figure 2** illustre les différents niveaux.  
 Nous vous conseillons fortement de commencer par **implémenter le niveau 1**, puis de passer aux niveaux supérieurs lorsque les niveaux précédents sont fonctionnels.

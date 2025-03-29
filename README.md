@@ -1,6 +1,6 @@
 # Candy-crush-mini_project
 
-##Cahier des charges du projet
+## Cahier des charges du projet
 + La grille de jeu sera représentée par une liste 2D d’entiers. Un bonbon sera donc représenté
   par un entier dans cette grille.
 + Vous devrez choisir un des niveaux de difficulté de la règle du jeu défini dans la section 3

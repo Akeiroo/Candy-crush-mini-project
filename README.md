@@ -1,4 +1,4 @@
-  # Jeu de Bonbons 🍬
+  # Mini Projet Candy Crush 🍬
 
 Ce projet implémente un jeu de type "Candy Crush" en Python.
 

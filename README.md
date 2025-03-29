@@ -1,7 +1,9 @@
-# Candy-crush-mini_project
+  # Jeu de Bonbons 🍬
 
-## Objectif 
-Réaliser un jeu candy-crush like
+Ce projet implémente un jeu de type "Candy Crush" en Python.
+
+## 📌 Description
+Le jeu repose sur une grille de bonbons où l'objectif est d'aligner des combinaisons d'au moins **trois bonbons identiques** pour marquer des points.
 
 ## Cahier des charges du projet
 + La grille de jeu sera représentée par une liste 2D d’entiers. Un bonbon sera donc représenté

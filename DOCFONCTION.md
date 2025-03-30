@@ -1,6 +1,35 @@
-#Docstrings des fonctions composant le programme
+# Docstrings des fonctions composant le programme
 
-## 🛠 Fonctions Implémentées
+---
+#Fonctions Obligatoires 
+
+### `detecte_coordonnée_combinaisons_de_3(grille, i, j)`
+```python
+def detecte_coordonnée_combinaisons_de_3(grille, i, j):
+    """
+    Renvoie la liste 2D contenant les coordonnées appartenant à la combinaison du bonbon (i,j).
+    """
+```
+
+### `affichage_grille(grille, nb_type_bonbons)`
+```python
+def affichage_grille(grille, nb_type_bonbons):
+    """
+    Affiche la grille de jeu "grille" contenant au maximum "nb_type_bonbons" couleurs de bonbons différentes.
+    """
+```
+
+### `test_detecte_coordonnees_combinaisons()`
+```python
+def test_detecte_coordonnees_combinaisons():
+    """
+    Teste la fonction detecte_coordonnée_combinaisons_de_3(grille, i, j).
+    Pour chaque cas de test, affiche True si le test passe, False sinon.
+    """
+```
+---
+---
+## 🛠 Fonctions Supplémentaires
 
 ### `creer_grille(n)`
 ```python
@@ -128,12 +157,8 @@ def combinaisons_possible(grille, candy_a, candy_b):
    python main.py
    ```
 
----
 
-## 📜 Licence
-Ce projet est sous licence **MIT**. Vous êtes libre de le modifier et de le distribuer.
 
----
 
-🎮 **Amusez-vous bien !** 🍭
+
 

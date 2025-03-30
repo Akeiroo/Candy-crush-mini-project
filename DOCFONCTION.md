@@ -146,11 +146,11 @@ def combinaisons_possible(grille, candy_a, candy_b):
 ## 📌 Comment utiliser ce projet ?
 1. Clonez ce dépôt GitHub :
    ```sh
-   git clone https://github.com/utilisateur/nom_du_projet.git
+   git clone https://github.com/utilisateur/Candy-crush-mini-project.git
    ```
 2. Accédez au dossier du projet :
    ```sh
-   cd nom_du_projet
+   cd Candy-crush-mini-project
    ```
 3. Exécutez le programme principal en Python :
    ```sh

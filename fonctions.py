@@ -10,7 +10,45 @@ def detecte_coordonnée_combinaisons(grille, i, j):
 def affichage_grille(grille, nb_type_bonbons):
     """
     Affiche la grille de jeu "grille" contenant au maximum "nb_type_bonbons" couleurs de bonbons différentes.
+    
+def detecte_coordonnees_combinaisons(grille, i, j):
+
+Paramètres:
+    - grille (list): Liste 2D représentant la grille de jeu (carrée).
+    - i (int): L'indice de la ligne du bonbon à vérifier.
+    - j (int): L'indice de la colonne du bonbon à vérifier.
+    
+    Retourne:
+    - list: Liste des coordonnées de toutes les combinaisons trouvées.
     """
+    nb_ligne = len(grille)
+    nb_col = len(grille[0])
+   
+    bonbon = grille[i][j]  # Bonbon à vérifier
+    combinaisons = []  # Liste des combinaisons
+   
+     # Vérification des combinaisons horizontales (vers la droite)
+    if j <= nb_col - 3:  # S'assurer qu'il y a suffisamment de colonnes à droite
+        if grille[i][j+1] == bonbon and grille[i][j+2] == bonbon:
+            combinaisons.append([(i, j), (i, j+1), (i, j+2)])
+    
+    # Vérification des combinaisons horizontales (vers la gauche)
+    if j >= 2:  # S'assurer qu'il y a suffisamment de colonnes à gauche
+        if grille[i][j-1] == bonbon and grille[i][j-2] == bonbon:
+            combinaisons.append([(i, j), (i, j-1), (i, j-2)])
+
+    # Vérification des combinaisons verticales (vers le bas)
+    if i <= nb_ligne - 3:  # S'assurer qu'il y a suffisamment de lignes en dessous
+        if grille[i+1][j] == bonbon and grille[i+2][j] == bonbon:
+            combinaisons.append([(i, j), (i+1, j), (i+2, j)])
+
+    # Vérification des combinaisons verticales (vers le haut)
+    if i >= 2:  # S'assurer qu'il y a suffisamment de lignes au-dessus
+        if grille[i-1][j] == bonbon and grille[i-2][j] == bonbon:
+            combinaisons.append([(i, j), (i-1, j), (i-2, j)])
+    
+    return combinaisons  # Retourne la liste des combinaisons trouvées
+
 
 def test_detecte_coordonnees_combinaisons():
     """

@@ -2,18 +2,16 @@
 
 # Fonctions Obligatoires
 
-def detecte_coordonnée_combinaisons(grille, i, j):
-    """
-    Renvoie la liste 2D contenant les coordonnées appartenant à la combinaison du bonbon (i,j).
-    """
-
 def affichage_grille(grille, nb_type_bonbons):
     """
     Affiche la grille de jeu "grille" contenant au maximum "nb_type_bonbons" couleurs de bonbons différentes.
+    """
     
 def detecte_coordonnees_combinaisons(grille, i, j):
-
-Paramètres:
+  """
+    Renvoie la liste 2D contenant les coordonnées appartenant à la combinaison du bonbon (i,j).
+    
+    Paramètres:
     - grille (list): Liste 2D représentant la grille de jeu (carrée).
     - i (int): L'indice de la ligne du bonbon à vérifier.
     - j (int): L'indice de la colonne du bonbon à vérifier.
@@ -68,15 +66,28 @@ def creer_grille(n):
     """
 
 def verification_grille_possible(grille):
-    """
-    Vérifie si au moins une combinaison est possible dans la grille.
+   """
+    Vérifie s'il existe au moins une combinaison de 3 bonbons identiques dans la grille.
     
-    Arguments :
-    - grille (liste 2D) : la grille de jeu.
+    Paramètres:
+    - grille (list): Liste 2D représentant la grille de jeu (carrée).
     
-    Renvoie :
-    - (bool) : True si une combinaison est possible, sinon False.
+    Retourne:
+    - bool: True si une combinaison est possible, sinon False.
     """
+
+    var = false
+    # Parcourt chaque bonbon de la grille
+    for i in range(len(grille)):  # Parcourt toutes les lignes
+        for j in range(len(grille[i])):  # Parcourt toutes les colonnes
+            # Appelle la fonction detecte_coordonnees_combinaisons pour chaque bonbon (i, j)
+            combinaisons = detecte_coordonnees_combinaisons(grille, i, j)
+            if combinaisons:  # Si des combinaisons sont trouvées
+                var = True  
+    
+    # Si aucune combinaison n'est trouvée
+    return var
+
 
 def maj_score_joueur(score, combinaison):
     """

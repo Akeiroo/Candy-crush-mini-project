@@ -154,7 +154,7 @@ def combinaisons_possible(grille, candy_a, candy_b):
    ```
 3. Exécutez le programme principal en Python :
    ```sh
-   python main.py
+   python candt_crush.py
    ```
 4. Ou :
    Télécharger le projet avec le bouton sur la page d'acceuil

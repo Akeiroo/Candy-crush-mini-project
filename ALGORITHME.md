@@ -1,46 +1,65 @@
 # Algorithme du Jeu Candy Crush
 
-## Initialisation
-1. Créer la grille (génération aléatoire de bonbons).
-2. Tant que `vérification_grille_possible` est faux :
-   - Détecter les coordonnées des combinaisons de 3 bonbons alignés (fonction `detecte_coordonnée_3_combinaisons`).
-   - Remplacer les 3 bonbons par des cases vides.
+# Initialisation
 
-## Affichage Initial
-- Afficher la grille.
-- Afficher le score du joueur.
+1. **Créer la grille** (génération aléatoire de bonbons)  
+   Appel de la fonction : `creer_grille()`  
+   
+2. Tant que la **vérification de la grille possible** est fausse :  
+   - Appel de la fonction : `verification_grille_possible(grille)`
+   - Appel de la fonction : `detecte_coordonnees_3_combinaisons(grille)`
+   - Appel de la fonction : `remplacer_3_bonbons(grille)`
+   
+3. **Afficher la grille**  
+   Appel de la fonction : `afficher_grille(grille)`
+   
+4. **Afficher le score du joueur**  
+   Appel de la fonction : `afficher_score_joueur()`
 
 ---
 
-## Boucle - Tour du joueur
+# Boucle - Tour du joueur
 
-1. Si des combinaisons possibles sont détectées :
-   - Demander à l'utilisateur d'échanger deux bonbons.
-   - Vérifier que l'échange est possible.
+1. Si des combinaisons sont possibles :  
+   - Demander un échange de bonbons au joueur.
+   - Vérifier que l'échange est possible :  
+     Appel de la fonction : `verifier_echange_possible(grille, candy_a, candy_b)`
+     
+     - Si l'échange est **impossible** :  
+       Demander à l'utilisateur d'entrer d'autres coordonnées.
+       
+     - Si l'échange est **possible** :  
+       Appel de la fonction : `executer_changement(grille, candy_a, candy_b)`
+       Afficher la grille mise à jour  
+       Appel de la fonction : `afficher_grille(grille)`
+       
+2. Boucle tant qu'il y a des **combinaisons à supprimer** :  
+   - Détecter les 3 bonbons alignés (combinaison de 3)  
+     Appel de la fonction : `detecte_3_combinaisons(grille)`  
+   - Afficher la grille après la suppression des bonbons  
+     Appel de la fonction : `afficher_grille(grille)`
    
-2. Si l'échange n'est pas possible :
-   - Demander à l'utilisateur d'entrer d'autres coordonnées.
+3. **Mettre à jour le score du joueur**  
+   Appel de la fonction : `mise_a_jour_score()`  
+
+4. Remplacer les bonbons supprimés par des **cases vides**  
+   Appel de la fonction : `remplacement_bonbons(grille)`
    
-3. Sinon :
-   - Exécuter l'échange des deux bonbons.
-   - Afficher la grille.
+5. **Remplir les cases vides avec des bonbons du dessus**  
+   Appel de la fonction : `remplir_cases_vides(grille)`  
+   Afficher la grille après remplissage  
+   Appel de la fonction : `afficher_grille(grille)`
 
-4. Tant qu'il y a des combinaisons à supprimer :
-   - Détecter une combinaison de 3 bonbons alignés (fonction `detecte_3_combinaison`).
-   - Afficher la grille.
-   - Mettre à jour le score du joueur.
-   - Remplacer les bonbons de la combinaison par des cases vides.
+6. **Remplir les cases vides de manière aléatoire**  
+   Appel de la fonction : `remplissage_aleatoire(grille)`  
 
-5. Remplir les cases vides avec des bonbons provenant du dessus.
-
-## Vérification et Remplissage
-1. Remplir les cases supérieures de manière aléatoire.
-2. Détecter si de nouvelles combinaisons de bonbons sont créées après le remplissage.
+7. **Détecter les combinaisons de bonbons**  
+   Appel de la fonction : `detecte_combinaisons(grille)`  
    
-3. Tant que des combinaisons sont détectées :
-   - Remplir les cases supérieures de manière aléatoire.
-   - Vérifier à nouveau si une combinaison est formée.
-
-## Affichage Final
-- Afficher la grille mise à jour.
-- Afficher le score final du joueur.
+8. Tant qu'il y a des **combinaisons détectées** :  
+   - Remplir les cases vides de manière aléatoire  
+     Appel de la fonction : `remplissage_aleatoire(grille)`
+   - Détecter les combinaisons de bonbons  
+     Appel de la fonction : `detecte_combinaisons(grille)`  
+   - Afficher la grille après chaque mise à jour  
+     Appel de la fonction : `afficher_grille(grille)`

@@ -1,7 +1,7 @@
 # Docstrings des fonctions composant le programme
 
 ---
-#Fonctions Obligatoires 
+# Fonctions Obligatoires 
 
 ### `detecte_coordonnée_combinaisons_de_3(grille, i, j)`
 ```python

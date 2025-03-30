@@ -3,9 +3,9 @@
 ---
 # Fonctions Obligatoires 
 
-### `detecte_coordonnée_combinaisons_de_3(grille, i, j)`
+### `detecte_coordonnée_combinaisons(grille, i, j)`
 ```python
-def detecte_coordonnée_combinaisons_de_3(grille, i, j):
+def detecte_coordonnée_combinaisons(grille, i, j):
     """
     Renvoie la liste 2D contenant les coordonnées appartenant à la combinaison du bonbon (i,j).
     """
